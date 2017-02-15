@@ -25,6 +25,7 @@ shortcutParameters ipdht = L.intercalate " " $
       "--listen", "0.0.0.0:12100",
       "--keyfile", "\"%APPDATA%\\Daedalus\\Secrets\\secret.key\"",
       "--update-latest-path", "\"" <> installerPath <> "\"",
+      "--update-with-package",
       "--logs-prefix", "\"%APPDATA%\\Daedalus\\Logs\"",
       "--db-path", "\"%APPDATA%\\Daedalus\\DB-0.2\"",
       "--wallet-db-path", "\"%APPDATA%\\Daedalus\\Wallet-0.2\"",
