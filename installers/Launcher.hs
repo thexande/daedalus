@@ -60,14 +60,14 @@ launcherArgs Launcher{..} = unwords $
                           , "--configuration-key",  quote "mainnet_dryrun_wallet_macos64"
                          ]
       nodeArgs = [
-        "--report-server", "http://report-server.cardano-mainnet.iohk.io:8080",
+        "--report-server", "http://report-server.awstest.iohkdev.io:8080",
         "--log-config", "log-config-prod.yaml",
         "--update-latest-path", quote (updArchivePath updater),
         "--keyfile", quote (runtimePath <> "Secrets-" <> version <> (pathSeparator : "secret.key")),
         "--logs-prefix", quote (runtimePath <> "Logs"),
         "--db-path", quote (runtimePath <> "DB-" <> version),
         "--wallet-db-path", quote (runtimePath <> "Wallet-" <> version),
-        "--update-server", "http://update.cardano-mainnet.iohk.io",
+        "--update-server", "https://s3.eu-central-1.amazonaws.com/update-system-testing/",
         "--update-with-package",
         "--no-ntp",
         "--tlscert", quote (tlsBase <> "server" <> (pathSeparator : "server.crt")),
